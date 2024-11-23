@@ -1,0 +1,17 @@
+package com.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean
+	public DriverManagerDataSource getDataSource()
+	{
+		DriverManagerDataSource d=new DriverManagerDataSource();
+		d.setDriverClassName("com.mysql.cj.jdbc.Driver");
+	}
+
+}

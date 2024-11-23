@@ -1,0 +1,14 @@
+package com.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.config.AppConfig;
+
+public class AppMain {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext cxt=new AnnotationConfigApplicationContext(AppConfig.class);
+		
+		
+	}
+}

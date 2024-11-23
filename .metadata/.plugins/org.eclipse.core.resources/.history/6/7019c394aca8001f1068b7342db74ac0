@@ -1,0 +1,48 @@
+package com.main;
+
+import java.util.Scanner;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.AppConfig.AppConfig;
+
+public class Main {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext cxt=new AnnotationConfigApplicationContext(AppConfig.class);
+		
+		JdbcTemplate t=cxt.getBean("getTemplate",JdbcTemplate.class);
+		if(t!=null)
+		{
+			System.out.println("Connected to DataBase");
+		}
+		else
+		{
+			System.out.println("Not Connected to Database");
+		}
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Name");
+		String name=sc.nextLine();
+		
+		System.out.println("Enter the Email");
+		String email=sc.nextLine();
+		
+		sc.nextLine();
+		System.out.println("Enter the Mobile number");
+		long no=sc.nextInt();
+		
+		int val=t.update("insert into register value ('0',?,?,?)",new Object[] {name, email,no});
+		if(val>0)
+		{
+			System.out.println("Data Inserted");
+			
+		}
+		else
+		{
+			System.out.println("Data Not Inserted ");
+		}
+		
+	}
+}

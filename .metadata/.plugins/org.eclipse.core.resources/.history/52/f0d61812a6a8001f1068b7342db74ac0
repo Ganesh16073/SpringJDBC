@@ -1,0 +1,23 @@
+package com.model;
+
+public class Register {
+	int id;
+	String name;
+	String email;
+	int contact;
+	
+	
+	public Register() {
+	}
+
+
+	public Register(int id, String name, String email, int contact) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.contact = contact;
+	}
+	
+
+}

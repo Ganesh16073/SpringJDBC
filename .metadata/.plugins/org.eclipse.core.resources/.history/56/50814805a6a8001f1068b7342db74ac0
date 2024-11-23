@@ -1,0 +1,10 @@
+package com.model;
+
+public class Register {
+	int id;
+	String name;
+	String email;
+	int contact;
+	
+
+}

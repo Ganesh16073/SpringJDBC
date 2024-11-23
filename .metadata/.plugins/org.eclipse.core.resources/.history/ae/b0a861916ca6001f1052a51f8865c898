@@ -1,0 +1,20 @@
+package com.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class AppConfig {
+	@Bean
+	public DriverManagerDataSource getDataSource()
+	{
+		DriverManagerDataSource d=new DriverManagerDataSource();
+		d.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		d.setUsername("root");
+		d.setCatalog("jdbc:mysql://localhost:3306/mydb");
+		d.setPassword("Ganesh4237@");
+		return d;
+	}
+
+}

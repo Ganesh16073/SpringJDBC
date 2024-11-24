@@ -37,7 +37,7 @@ public class AppMain {
 						return r;
 					}
 			
-				},email);// here we pass the conditional data
+				},email);
 		
 		System.out.println("The data is "+li);
 		

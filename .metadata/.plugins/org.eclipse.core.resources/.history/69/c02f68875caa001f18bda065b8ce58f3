@@ -30,16 +30,10 @@ public class AppMain {
 					@Override
 					public Register mapRow(ResultSet rs, int rowNum) throws SQLException {
 						Register r=new Register();
-						r.setId(rs.getInt(1));
-						r.setName(rs.getString(2));
-						r.setEmail(rs.getString(3));
-						r.setContact(rs.getInt(4));
 						return r;
 					}
 			
-				},email);// here we pass the conditional data
-		
-		System.out.println("The data is "+li);
+				},email);
 		
 	}
 }
